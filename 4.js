@@ -23,4 +23,12 @@
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const enteredNumber = +prompt("Введите положительное целое число: ");
+
+const hundreds = Math.trunc(enteredNumber / 100) % 100;
+const tens = Math.trunc(enteredNumber / 10) % 10;
+const units = enteredNumber % 10;
+
+console.log(`Количество сотен: ${hundreds}
+Количество десятков: ${tens} 
+Количество единиц: ${units}`);
