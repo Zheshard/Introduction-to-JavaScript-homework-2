@@ -13,4 +13,16 @@
 в консоль "Одно или более значений некорректно.".
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const positive = Number(+prompt("Введите положительное число"));
+const negative = Number(+prompt("Введите отрицательное число"));
+
+if (
+  !Number.isNaN(positive) &&
+  !Number.isNaN(negative) &&
+  positive > 0 &&
+  negative < 0
+) {
+  console.log("Все значения верные.");
+} else {
+  console.log("Одно или более значений некорректно.");
+}
