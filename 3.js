@@ -14,4 +14,16 @@
 число 32.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const dayNumber = +prompt("Введите число в интервале [1, 32)");
+let decade;
+
+if (!(Number.isNaN(dayNumber) || dayNumber < 1 || dayNumber >= 32)) {
+  if (dayNumber >= 1 && dayNumber <= 10) {
+    decade = 1;
+  } else if (dayNumber >= 11 && dayNumber <= 20) {
+    decade = 2;
+  } else if (dayNumber >= 21 && dayNumber <= 31) {
+    decade = 3;
+  }
+  console.log(`Число ${dayNumber} попадает в ${decade} декаду месяца.`);
+} else console.log("Неверное значение");
